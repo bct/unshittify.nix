@@ -4,10 +4,21 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+
+    # flake-root is a dependency of flake-containers that enable to find the root project for the flake
+    # repositorty to create the states for the containers
+    flake-root.url = "github:srid/flake-root";
+
+    # Import flake-containers
+    flake-containers.url = "github:adfaure/flake-containers";
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-parts }:
+  outputs = inputs@{ self, nixpkgs, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        ./containers.nix
+      ];
+
       flake = {
         # Put your original flake attributes here.
       };
