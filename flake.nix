@@ -57,6 +57,19 @@
             hash = "sha256-78UAz43F5N5NxO6KOHiLLglOVZyYDSjPYIfGQ5mabS4=";
           };
         });
+
+        packages.nitter-get-token = pkgs.stdenv.mkDerivation {
+          name = "nitter-get-token";
+
+          propagatedBuildInputs = [
+            (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
+              requests
+            ]))
+          ];
+
+          dontUnpack = true;
+          installPhase = "install -Dm755 ${./scripts/nitter-get-token.py} $out/bin/nitter-get-token";
+        };
       };
     };
 }
