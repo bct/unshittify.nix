@@ -49,12 +49,12 @@
           };
 
         packages.nitter = pkgs.nitter.overrideAttrs (old: {
-          version = "unshittify-b4ad45b";
+          version = "unshittify-6deae3b";
           src = pkgs.fetchFromGitHub {
             owner = "Unshittify";
             repo = "nitter";
-            rev = "b4ad45bd798314238977d8b7c3335a90c327cc37";
-            hash = "sha256-78UAz43F5N5NxO6KOHiLLglOVZyYDSjPYIfGQ5mabS4=";
+            rev = "6deae3bf9b5c756b74881fa63504dcc2ff2b9418";
+            hash = "sha256-bPv8Z9T9L4afERZS21Dx6cMd/zDOvX2RTxTjLhsdNVY=";
           };
         });
 
