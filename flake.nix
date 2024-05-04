@@ -58,6 +58,7 @@
           };
         });
 
+        # nitter also has twitter_oauth.sh, but it doesn't take username & password on stdin.
         packages.nitter-get-token = pkgs.stdenv.mkDerivation {
           name = "nitter-get-token";
 
