@@ -2,7 +2,7 @@
   description = "miniflux.nix";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     # flake-root is a dependency of flake-containers that enable to find the root project for the flake
@@ -53,8 +53,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "Unshittify";
             repo = "nitter";
-            rev = "6deae3bf9b5c756b74881fa63504dcc2ff2b9418";
-            hash = "sha256-bPv8Z9T9L4afERZS21Dx6cMd/zDOvX2RTxTjLhsdNVY=";
+            rev = "4ee4499d0dfe7fe285518634e08f269c51068a89";
+            hash = "sha256-ZRJks5gweIQmPQqA98ZcI5ksKVVaUuttos+6yQfQ5HQ=";
           };
         });
 
